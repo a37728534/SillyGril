@@ -25,7 +25,7 @@ younweri 对任何本仓库中包含的脚本在使用中可能出现的问题�
 
 傻妞订阅链接：sub://T4EywWN46ztYBhHNdOl6TquTZR7DdPAG85WQAJ/9g8H/ppKuuV34NYSBqRLRNzU5ZLMZd7dpDOEOGyumh7onHVwRvQF1Zq56ltCrxL2p+sU=
 
- **旧版傻妞和奥特曼不会更新短信版本** 
+ **旧版傻妞和奥特曼将会这这两天更新短信登录** 
 
  **特此鸣谢** 
 傻妞TG交流群：https://t.me/trialerr
