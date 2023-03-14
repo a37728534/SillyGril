@@ -14,6 +14,7 @@ echo "2. 安装go-cqhttp"
 echo "3. 安装青龙面板"
 echo "4. 安装BBK微信扫码"
 echo "5. 安装BBK京东扫码"
+echo "6. 安装Docker服务"
 
 # 读取用户输入的选项
 read choice
