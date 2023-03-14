@@ -75,8 +75,8 @@ case $choice in
         -v $PWD/logs:/data/logs \
         -p 3081:81 \
         --name bbk-jd-qr \
-        --privileged=true
-    neuynp8oido4ejj/jd-qr:latest
+        --privileged=true \
+        neuynp8oido4ejj/jd-qr:latest
     ;;
 6)
     arch=$(uname -m)                 # 获取系统架构信息
