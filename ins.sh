@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# 判断是否已安装Docker服务
-check_docker() {
-    if ! command -v docker &> /dev/null; then
-        echo "Docker服务未安装，请先安装Docker服务。"
-        exit
-    fi
-}
 # 提示用户选择需要安装的软件
 echo "请选择需要安装的软件:"
 echo "1. 安装奥特曼"
@@ -42,7 +35,10 @@ case $choice in
     ;;
 3)
     # 安装青龙面板
-    check_docker
+    if ! command -v docker &>/dev/null; then
+        echo "Docker服务未安装，请先安装Docker服务。"
+        exit
+    fi
     docker run -dit \
         -v $PWD/ql:/ql/config \
         -p 5700:5700 \
@@ -55,7 +51,10 @@ case $choice in
     ;;
 4)
     # 安装BBK微信扫码
-    check_docker
+    if ! command -v docker &>/dev/null; then
+        echo "Docker服务未安装，请先安装Docker服务。"
+        exit
+    fi
     cd /root && mkdir -p $(pwd)/bbk-qr/{conf,logs} && cd $(pwd)/bbk-qr
     docker run -dit \
         -v $PWD/conf:/data/conf \
@@ -66,7 +65,10 @@ case $choice in
     ;;
 5)
     # 安装BBK京东扫码
-    check_docker
+    if ! command -v docker &>/dev/null; then
+        echo "Docker服务未安装，请先安装Docker服务。"
+        exit
+    fi
     cd /root && mkdir -p $(pwd)/bbk-jd-qr/{conf,logs} && cd $(pwd)/bbk-jd-qr
     docker run -dit \
         -v $PWD/conf:/data/conf \
