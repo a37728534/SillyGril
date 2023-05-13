@@ -48,7 +48,11 @@ update_soft() {
   fi
 }
 check_update() {
-  new_version=$(curl -s "https://ghproxy.com/https://raw.githubusercontent.com/zelang/elm-release/main/version")
+  new_version=$(curl -s "https://fastly.jsdelivr.net/gh/zelang/elm-release@main/version")
+  if [[ !${new_version} =~ [:digit:].[:digit:].[:digit:] ]];then
+    echo -e "[Error] 当前版本获取失败，请尝试更改本脚本51行获取版本地址链接"
+    exit 0
+  fi
   echo -e "[SUCCESS] 当前最新版本为：${new_version}"
   if [ -d "${cur_dir}/elmtool" ]; then
     # shellcheck disable=SC2086
