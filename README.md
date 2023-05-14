@@ -9,4 +9,4 @@
 
 Dowload the binary: [Releases](https://github.com/zelang/elm-release/releases)
 
-Tutorial: Redirect to [Here](https://zelang.tk/post/elm-tool-use-tutorial/)
+Tutorial: Redirect to [Here](https://elmtool.me/post/elm-tool-use-tutorial/)
